@@ -12,3 +12,4 @@
 - 预期：给出已验证资源和待验证配额，按实际卡型/卡数提出训练建议；无法满足仓库门禁时准确记录阻塞。
 - 实际：已通过代理端到端 HTTP 200、clone/pull 和 Slurm nvidia-smi；确认 1×5090、32607 MiB、驱动 580.178.04、根盘 42G、MemAvailable 约 234GiB。资源检查成功，未执行训练性能测试。
 - 文档检查：预算敏感性公式用 PowerShell 重算（100/500/1000 token/s 的 100M、1B、100B），结果与表格一致；git diff --check 通过。7 个 Markdown 文件的本地链接、代码围栏和文件大小检查全部通过；外链核实 DeepSpeed CPU offload 教程与 PyTorch 维护者的 sm_120 兼容说明。仅修改文档，不增加模型测试。
+- 同步与清理：计划 d704de9 已推送并在 Guqq2 pull 验证，服务器工作树干净；精确关闭本任务代理后，远端检查确认 PORT_1080_RELEASED。收尾仅追加日志，并再次执行 git diff --check。

@@ -12,3 +12,8 @@
 - 新增 docs/guqq2-plan.md，更新总计划：CPU optimizer offload、1024 序列、microbatch 1、32K token/update、100M 试训再评估 1B；100B/多卡方案降为扩容参考。
 - 根盘仅余 42G，完整恢复点约 50–80GB，必须先落实持久存储；未操作未知未挂载磁盘。MemAvailable 约 234GiB，内存容量可试 offload，CPU load 影响留待 profiling。
 - 记录代理恢复、用户授权精确终止旧会话、Slurm 与存储信息，以及 Windows SSH/CRLF 和 MemAvailable 经验。
+
+## 2026-10-28：资源盘点收尾
+
+- d704de9 已 push 并在服务器 pull，计划同步完成；代理精确关闭，1080 释放。
+- 补记检查与连接日志；无训练或环境变更，等待持久存储落实后进入实现阶段。
